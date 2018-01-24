@@ -9,12 +9,19 @@
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="sf-ui-display-light-58646b33e0551.otf">
+            <string>SFUIDisplay-Light</string>
+        </array>
+    </customFonts>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DDItemView" customModule="DropDownList" customModuleProvider="target">
             <connections>
-                <outlet property="contentView" destination="Rvn-Hx-hnA" id="ZAM-Zk-4g8"/>
+                <outlet property="contentView" destination="Rvn-Hx-hnA" id="gXb-TW-tA0"/>
                 <outlet property="disclousureIndicatorImageView" destination="yqv-iW-VGl" id="Ryi-ib-hfn"/>
+                <outlet property="separatorWeight" destination="HIG-Xg-YAk" id="I9Z-qH-ZbF"/>
                 <outlet property="titleLabel" destination="Odg-qz-4cv" id="3Wa-As-47n"/>
+                <outlet property="viewHeight" destination="FI2-rC-NbN" id="g2I-SF-KWe"/>
                 <outlet property="viewWidth" destination="yJZ-Kf-eYe" id="V3v-mI-LyZ"/>
             </connections>
         </placeholder>
@@ -24,42 +31,53 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Rvn-Hx-hnA">
-                    <rect key="frame" x="2" y="2" width="362" height="57"/>
+                    <rect key="frame" x="0.0" y="0.0" width="366" height="57"/>
                     <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Odg-qz-4cv">
+                            <rect key="frame" x="8" y="18" width="316" height="21"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="21" id="cfJ-5I-czW"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="SFUIDisplay-Light" family="SF UI Display" pointSize="20"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
                         <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="arrow-point-to-right" translatesAutoresizingMaskIntoConstraints="NO" id="yqv-iW-VGl">
-                            <rect key="frame" x="328" y="19" width="26" height="19"/>
+                            <rect key="frame" x="332" y="19" width="26" height="19"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="19" id="PrX-Jw-ESu"/>
                                 <constraint firstAttribute="width" constant="26" id="ceY-MX-R2q"/>
                             </constraints>
                         </imageView>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Odg-qz-4cv">
-                            <rect key="frame" x="8" y="18" width="312" height="21"/>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="5XP-Z7-uLz">
+                            <rect key="frame" x="0.0" y="56" width="366" height="1"/>
+                            <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                             <constraints>
-                                <constraint firstAttribute="height" constant="21" id="cfJ-5I-czW"/>
+                                <constraint firstAttribute="height" constant="1" id="HIG-Xg-YAk"/>
                             </constraints>
-                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                            <nil key="textColor"/>
-                            <nil key="highlightedColor"/>
-                        </label>
+                        </imageView>
                     </subviews>
-                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
+                        <constraint firstAttribute="bottom" secondItem="5XP-Z7-uLz" secondAttribute="bottom" id="BmS-Jz-HNw"/>
                         <constraint firstAttribute="trailing" secondItem="yqv-iW-VGl" secondAttribute="trailing" constant="8" id="DvM-AM-yNm"/>
+                        <constraint firstAttribute="height" constant="57" id="FI2-rC-NbN"/>
+                        <constraint firstAttribute="trailing" secondItem="5XP-Z7-uLz" secondAttribute="trailing" id="X0h-kE-Yig"/>
                         <constraint firstItem="yqv-iW-VGl" firstAttribute="leading" secondItem="Odg-qz-4cv" secondAttribute="trailing" constant="8" id="cBv-kx-g3f"/>
                         <constraint firstItem="yqv-iW-VGl" firstAttribute="centerY" secondItem="Rvn-Hx-hnA" secondAttribute="centerY" id="ddT-7S-5Ve"/>
+                        <constraint firstItem="5XP-Z7-uLz" firstAttribute="leading" secondItem="Rvn-Hx-hnA" secondAttribute="leading" id="g7j-lI-4Zp"/>
                         <constraint firstItem="Odg-qz-4cv" firstAttribute="centerY" secondItem="Rvn-Hx-hnA" secondAttribute="centerY" id="qCI-Q2-0uX"/>
                         <constraint firstItem="Odg-qz-4cv" firstAttribute="leading" secondItem="Rvn-Hx-hnA" secondAttribute="leading" constant="8" id="u1a-HI-zf1"/>
-                        <constraint firstAttribute="width" constant="362" id="yJZ-Kf-eYe"/>
+                        <constraint firstAttribute="width" constant="366" id="yJZ-Kf-eYe"/>
                     </constraints>
                 </view>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
-                <constraint firstItem="Rvn-Hx-hnA" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="2" id="DRL-XH-FHt"/>
-                <constraint firstItem="Rvn-Hx-hnA" firstAttribute="bottom" secondItem="vUN-kp-3ea" secondAttribute="bottom" constant="2" id="U9z-0J-6YR"/>
-                <constraint firstItem="Rvn-Hx-hnA" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="2" id="vpS-8J-fAk"/>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="Rvn-Hx-hnA" secondAttribute="trailing" constant="2" id="wlK-Yd-jPl"/>
+                <constraint firstItem="Rvn-Hx-hnA" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="93t-3Y-e0s"/>
+                <constraint firstItem="Rvn-Hx-hnA" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="Ik8-WL-G8J"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="Rvn-Hx-hnA" secondAttribute="bottom" id="iQh-oB-cnO"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="Rvn-Hx-hnA" secondAttribute="trailing" id="mDH-QC-kFt"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>

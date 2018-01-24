@@ -8,6 +8,11 @@
 
 import UIKit
 
-class DDListSubitem: NSObject {
-
+protocol DDListSubitem: class {
+    
+    var id: NSNumber { get set }
+    var title: String { get set }
+    var imageURL:String? { get set }
+    
+    init(id:NSNumber, title:String, imageURL: String)
 }

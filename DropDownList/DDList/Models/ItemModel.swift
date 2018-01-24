@@ -8,14 +8,19 @@
 
 import UIKit
 
-class ItemModel: UIView {
-
-    /*
-    // Only override draw() if you perform custom drawing.
-    // An empty implementation adversely affects performance during animation.
-    override func draw(_ rect: CGRect) {
-        // Drawing code
+class ItemModel: NSObject, DDListItem {
+    
+    var id: NSNumber
+    var title: String
+    var imageURL:String?
+    var subitems: [DDListSubitem]
+    
+    required init(id:NSNumber, title:String, imageURL: String, subitems:[DDListSubitem]) {
+        self.id = id
+        self.title = title
+        self.imageURL = imageURL
+        self.subitems = subitems
     }
-    */
 
+    
 }

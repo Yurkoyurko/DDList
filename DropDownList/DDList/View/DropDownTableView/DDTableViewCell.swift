@@ -10,6 +10,9 @@ import UIKit
 
 class DDTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var logoImageView: UIImageView!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -17,7 +20,16 @@ class DDTableViewCell: UITableViewCell {
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
+        if selected {
+            if self.accessoryType == .checkmark {
+                self.accessoryType = .none
+            } else {
+                self.accessoryType = .checkmark
+            }
+            
+        } else {
+            self.accessoryType = .none
+        }
         // Configure the view for the selected state
     }
 
